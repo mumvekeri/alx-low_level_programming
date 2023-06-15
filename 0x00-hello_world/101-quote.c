@@ -7,8 +7,8 @@
 */
 int main(void)
 {
-const char[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-write(STDERR_FILENO, message, strlen(message));
+const char message[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+write(STDERR_FILENO, strlen(message));
 return (1);
 }
 
