@@ -2,7 +2,9 @@
 /**
 * main - Entry point
 *
-* Return: size of various bytes
+* Description: Uses the puts function to print a message
+*
+* Return: Always 0 (Success)
 */
 
 int main(void)
