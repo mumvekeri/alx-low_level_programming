@@ -1,6 +1,5 @@
 #include <unistd.h>
-#include <string.h>
-#include <errno.h>
+#include <stdio.h>
 /**
 * main - Entry point
 * Return: 1 (Success)
