@@ -3,7 +3,8 @@
 * main - Entry point
 * Return: 0 (Success)
 */
-int main(void) {
+int main(void)
+{
 char lc;
 
 for (lc = 'a'; lc <= 'z'; lc++)
