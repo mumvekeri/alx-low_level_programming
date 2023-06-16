@@ -5,13 +5,13 @@
 */
 int main(void)
 {
-char lo;
+char la;
 
-for (lo = 'a'; lo <= 'z'; lo++)
+for (la = 'a'; la <= 'z'; la++)
 {
-if (lo != 'q' && lo != 'e')
+if (la != 'q' && la != 'e')
 {
-putchar(lo);
+putchar(la);
 }
 putchar('\n');
 return (0);
