@@ -1,26 +1,28 @@
 #include <stdio.h>
 /**
-* main - prints all possible combinations of two digits.
-* Return: 0 (Success)
-*/
+ * main - prints all the possible combinations of two digits.
+ * Return: 0 (Success)
+ */
 int main(void)
 {
-int n;
-int x;
-for (n = 0; n <= 9; n++)
-{
-for (x = 0; x <= 9; x++)
-{
-if (n >= x)
-continue;
-putchar(n + '0');
-putchar(x + '0');
-if ((n != 8) || (x != 9))
-{
-putchar(',');
-putchar(' ');
-}
-}
-putchar('\n');
-return (0);
+	int n;
+	int x;
+
+	for (n = 0; n <= 9; n++)
+	{
+		for (x = 0; x <= 9; x++)
+		{
+			if (n >= x)
+				continue;
+			putchar(n + '0');
+			putchar(x + '0');
+			if ((n != 8) || (x != 9))
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }
