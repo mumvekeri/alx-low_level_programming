@@ -23,22 +23,22 @@ int main(void)
 			if ((a != 8) || (b != 9))
 				putchar(' ');
 		}
-		for (c = 0; c <= 9; c++)
+	for (c = 0; c <= 9; c++)
+	{
+		for (d = 0; d <= 9; d++)
 		{
-			for (d = 0; d <= 9; d++)
-			{
-				if (c > d)
-					continue;
-				putchar(c + '0');
-				putchar(d + '0');
+			if (c > d)
+				continue;
+			putchar(c + '0');
+			putchar(d + '0');
 
-				if ((c != 8) || (d != 9))
-				{
-					putchar(',');
-					putchar(' ');
-				}
+			if ((c != 8) || (d != 9))
+			{
+			putchar(',');
+			putchar(' ');
 			}
 		}
+	}
 	}
 	putchar('\n');
 	return (0);
