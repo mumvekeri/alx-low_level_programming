@@ -20,7 +20,7 @@ int main(void)
 			putchar(a + '0');
 			putchar(b + '0');
 
-			if ((a != 8) || (b != 9))
+			if (!(a == 8 && b == 9))
 				putchar(' ');
 		}
 	for (c = 0; c <= 9; c++)
@@ -32,7 +32,7 @@ int main(void)
 			putchar(c + '0');
 			putchar(d + '0');
 
-			if ((c != 8) || (d != 9))
+			if (!(c == 8 && d == 9))
 			{
 			putchar(',');
 			putchar(' ');
