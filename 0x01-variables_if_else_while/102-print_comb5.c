@@ -17,8 +17,8 @@ int main(void)
 		{
 			if (a > b)
 				continue;
-			putchar(a + '0');
-			putchar(b + '0');
+			putchar((a % 10) + '0');
+			putchar((b % 10) + '0');
 
 			if (!(a == 8 && b == 9))
 				putchar(' ');
@@ -29,8 +29,8 @@ int main(void)
 		{
 			if (c > d)
 				continue;
-			putchar(c + '0');
-			putchar(d + '0');
+			putchar((c % 10) + '0');
+			putchar((d % 10) + '0');
 
 			if (!(c == 8 && d == 9))
 			{
