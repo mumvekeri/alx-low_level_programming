@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
-* print_sign - function that prints the sign of a number
-* @n: The input number as an integer
+* print_sign - prints the sign of a number
+* @n: The number to be checked
 * Return: 1 if n is greater than zero, 0 is zero, -1 if n is less than 0
 */
 int print_sign(int n)
@@ -21,5 +21,5 @@ int print_sign(int n)
 		putchar(48);
 		return (0);
 	}
-	putchar('\n');
+
 }
