@@ -6,10 +6,10 @@
 int main(void)
 {
 	int count;
-	long int fib1 = 0;
-	long int fib2 = 1;
+	long int fib1 = 1;
+	long int fib2 = 2;
 	long int sum;
-	
+
 	printf("%ld, %ld", fib1, fib2);
 	for (count = 0; count < 48; count++)
 	{
