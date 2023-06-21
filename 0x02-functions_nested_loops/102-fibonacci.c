@@ -10,15 +10,14 @@ int main(void)
 	long int fib2 = 2;
 	long int sum;
 
-	printf("%ld, %ld", fib1, fib2);
-	for (count = 0; count < 48; count++)
+	for (count = 0; count < 50; count++)
 	{
 		sum = fib1 + fib2;
 		printf("%ld", sum);
 
 		fib1 = fib2;
 		fib2 = sum;
-		
+
 		if (count == 49)
 			printf("\n");
 		else
