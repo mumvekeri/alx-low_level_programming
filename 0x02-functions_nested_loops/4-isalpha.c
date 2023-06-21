@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
 * isalpha -  a function that checks for alphabetic character.
