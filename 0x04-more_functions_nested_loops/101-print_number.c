@@ -7,9 +7,7 @@
 */
 void print_number(int n)
 {
-	unsigned int m;
-	unsigned int d;
-	unsigned int count;
+	unsigned int m, d, count;
 
 	if (n < 0)
 	{
@@ -32,7 +30,7 @@ void print_number(int n)
 	{
 		putchar(((m / count) % 10) + 48);
 	}
-}
+}please
 
 
 
