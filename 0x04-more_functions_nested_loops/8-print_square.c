@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 /**
-* print_square - draws a straight line in the terminal
-* @size: number of times the character should be printed
+* print_square - prints a square, followed by a new line
+* @size: size of the square
 */
 void print_square(int size)
 {
