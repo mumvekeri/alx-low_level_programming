@@ -4,7 +4,7 @@
  *
  * Result: 0 (Success)
  */
-int main(voi)
+int main(void)
 {
 	printf("%s\n", _FILE_);
 	return (0);
