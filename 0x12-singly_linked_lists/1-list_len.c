@@ -3,7 +3,7 @@
 /**
  *  * list_len - returns the number of elements in a list
  *   * @h: the list_t list
- * Return: 0 (Success)
+ * Return: number of elements in the list h.
  */
 size_t list_len(const list_t *h)
 {
