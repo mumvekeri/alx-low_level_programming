@@ -1,10 +1,10 @@
 
-bal   main
+global   main
 extern    printf
 main:
-mov   rdi, format
-xor   rax, rax
+mov   edi, format
+xor   eax, eax
 call  printf
-mov   rax, 50
+mov   eax, 0
 ret
 format: db `Hello, Holberton\n`,0
