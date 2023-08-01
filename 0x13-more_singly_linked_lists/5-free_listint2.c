@@ -3,18 +3,18 @@
  * free_listint2 -  a function that frees a listint_t list
  * @head: list to be freed
  */
-void free_listint2(listint_t *head)
+void free_listint2(listint_t **head)
 {
 	listint_t *tmp;
 
 	if (head == NULL)
-		retun;
+		return;
 
 	while (head)
 	{
-	tmp = head->next;
-		free(head);
-		head = tmp;
+	tmp = (*head)->next;
+		free(*head);
+		*head = tmp;
 	}
 	*head = NULL;
 }
