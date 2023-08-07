@@ -2,9 +2,6 @@
 
 #define BUF_SIZE 1024
 
-char *create_buffer(char *file);
-void close_file(int fd);
-
 /**
  * *create_buffer - allocates buffer size of 1024 bytes
  * @file: name of the file
@@ -59,8 +56,8 @@ int main(int argc, char *argv[])
 	char *buf;
 	int to;
 	int from;
-	int a;
-	int b;
+	int r;
+	int w;
 
 	if (argc != 3)
 	{
@@ -69,27 +66,27 @@ int main(int argc, char *argv[])
 	}
 	buf = create_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
-	a = read(from, buf, 1024);
+	r = read(from, buf, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
-		if (from == -1 || a == -1)
+		if (from == -1 || r == -1)
 		{
 			dprintf(STDERR_FILENO,
 			"Error: Can't read from file %s\n", argv[1]);
 			free(buf);
 			exit(98);
 		}
-		b = write(to, buf, a);
-		if (to == -1 || b == -1)
+		w = write(to, buf, r);
+		if (to == -1 || w == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: cant read from file %s\n", argv[2]);
 			free(buf);
 			exit(99);
 		}
-		a = read(from, buf, 1024);
+		r = read(from, buf, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
-	} while (a > 0);
+	} while (r > 0);
 
 	free(buf);
 	close_file(from);
