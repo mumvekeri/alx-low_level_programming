@@ -1,6 +1,4 @@
 #include "main.h"
-
-#define BUF_SIZE 1024
 /**
  * *create_buffer - allocates buffer size of 1024 bytes
  * @file: name of the file
