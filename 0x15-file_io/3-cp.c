@@ -40,6 +40,15 @@ void close_file(int fd)
  * @argc: argument count
  * @argv:  command-line arguments passed to the program
  * Return: 0 (Success)
+ *
+ * Description: if the number of argument is not the correct one,
+ * exit with code 97  and print Usage.
+ * if file_from does not exist, or if you can not read it,
+ * exit with code 98 and print Error.
+ * if you can not create or if write to file_to fails,
+ * exit with code 99 and print Error.
+ * if you can not close a file descriptor , exit with code 100 and print Error
+ *
  */
 int main(int argc, char *argv[])
 {
@@ -62,7 +71,8 @@ int main(int argc, char *argv[])
 	do {
 		if (from == -1 || a == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: cant read from file %s\n", argv[1]);
+			dprintf(STDERR_FILENO,
+			"Error: Can't read from file %s\n", argv[1]);
 			free(buf);
 			exit(98);
 		}
@@ -76,8 +86,10 @@ int main(int argc, char *argv[])
 		a = read(from, buf, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
 	} while (a > 0);
+
 	free(buf);
 	close_file(from);
 	close_file(to);
+
 	return (0);
 }
