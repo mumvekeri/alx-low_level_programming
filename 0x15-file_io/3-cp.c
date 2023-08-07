@@ -4,7 +4,7 @@
 /**
  * *create_buffer - allocates buffer size of 1024 bytes
  * @file: name of the file
- * Return: 1 (Success)
+ * Return: A pointer to the buffer
  */
 char *create_buffer(char *file)
 {
@@ -21,7 +21,7 @@ char *create_buffer(char *file)
 }
 /**
  * close_file - closes files
- * @fd: descriptor to be closed.
+ * @fd: value of the file descriptor.
  */
 void close_file(int fd)
 {
