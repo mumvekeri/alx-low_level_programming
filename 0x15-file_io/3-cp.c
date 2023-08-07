@@ -1,4 +1,10 @@
 #include "main.h"
+
+#define BUF_SIZE 1024
+
+char *create_buffer(char *file);
+void close_file(int fd);
+
 /**
  * *create_buffer - allocates buffer size of 1024 bytes
  * @file: name of the file
@@ -12,7 +18,7 @@ char *create_buffer(char *file)
 
 	if (buf == NULL)
 	{
-		dprintf(STDERR_FILENO, "Error: cant write to %s\n", file);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
 		exit(99);
 	}
 	return (buf);
